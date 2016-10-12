@@ -56,29 +56,29 @@ a:hover {
     max-width: 100%;
 }
 
-#links ul {
+ul {
     list-style-type:none;
     margin: 0;
     padding: 0;
 }
 
-#links ul li {
+ul li {
     padding-top: 4px;
     padding-bottom: 4px;
 }
 
-#links ul li a,
-#links ul li a:active,
-#links ul li a:visited,
-#links ul li a:link,
-#links ul li a:hover {
+ul li a,
+ul li a:active,
+ul li a:visited,
+ul li a:link,
+ul li a:hover {
     text-decoration: underline;
     text-decoration-color: #E80000;
     -moz-text-decoration-color: #E80000;
     -webkit-text-decoration-color: #E80000;
 }
 
-#links ul li a:hover {
+ul li a:hover {
     color: #E80000;
 }
 
