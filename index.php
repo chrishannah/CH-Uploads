@@ -15,7 +15,7 @@
 
 
 <head>
-    <title>Chris Hannah | <?php echo $title; ?></title>
+    <title>Chris Hannah | Nope</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
     
