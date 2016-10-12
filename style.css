@@ -1,0 +1,100 @@
+html {
+  height: 100%;
+}
+
+body {
+    font-family: "Avenir Next", "Helvetica Neue", -apple-system, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    position: relative;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 400;
+    color: #E80000;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 14px;
+}
+
+a,
+a:active,
+a:visited,
+a:link,
+a:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+#header {
+    max-width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: #E80000;
+    color: white;
+    padding: 6px;
+}
+
+#content {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+}
+
+#content img {
+    max-width: 100%;
+}
+#content video {
+    max-width: 100%;
+}
+
+#links ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+}
+
+#links ul li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#links ul li a,
+#links ul li a:active,
+#links ul li a:visited,
+#links ul li a:link,
+#links ul li a:hover {
+    text-decoration: underline;
+    text-decoration-color: #E80000;
+    -moz-text-decoration-color: #E80000;
+    -webkit-text-decoration-color: #E80000;
+}
+
+#links ul li a:hover {
+    color: #E80000;
+}
+
+#footer {
+    max-width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 40px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #E80000;
+    color: white;
+    padding: 6px;
+}
