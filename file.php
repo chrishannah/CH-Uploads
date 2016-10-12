@@ -3,7 +3,7 @@
 
 <?php
     
-    $id = 1;
+    $id = 0;
     
     if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         $id = (int) $_GET['id'];
@@ -18,6 +18,11 @@
     $sql = "SELECT `title`, `description`, `date`, `file`, `views`, `type` FROM uploads WHERE id = $id";
     $result = $connection->query($sql);
     $upload = $result->fetch_assoc();
+    
+    if (mysqli_num_rows($result) == 0) {
+        header( 'Location: nope.php' ) ;
+    }
+    
     
     $title = $upload['title'];
     $description =  $upload['description'];
