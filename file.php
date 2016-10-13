@@ -1,6 +1,3 @@
-<!doctype html>
-<html>
-
 <?php
     
     $id = 0;
@@ -9,11 +6,7 @@
         $id = (int) $_GET['id'];
     }
     
-    $connection = new mysqli("127.0.0.1", "uploader", "upload123", "uploads");
-    
-    if ($connection->connect_error) {
-        die("Connection failed: " . $connection->connect_error);
-    }
+    include 'connection.php';
     
     $sql = "SELECT `title`, `description`, `date`, `file`, `views`, `type` FROM uploads WHERE id = $id";
     $result = $connection->query($sql);
@@ -57,63 +50,51 @@
     
 ?>
 
+<?php include 'header.php'; ?>
 
-<head>
-    <title>Chris Hannah | <?php echo $title; ?></title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+<div id="content">
+    <h1><?php echo $title; ?></h1>
+    <p>
+        <?php echo $views ?> views
+    </p>
     
-<body>
-    <div id="header">
-        <strong>Chris Hannah</strong> Uploads
-    </div>
-    <div id="content">
-        <h1><?php echo $title; ?></h1>
-        <p>
-            <?php echo $views ?> views
-        </p>
-        
-        <p>
-            <?php
-                if ($mediaType == "image") {
-                    echo '<img src="';
-                    echo $file;
-                    echo '">';
-                }
-                
-                if ($mediaType == "video") {
-                    echo '<video src="';
-                    echo $file;
-                    echo '" controls/>';
-                }
+    <p>
+        <?php
+            if ($mediaType == "image") {
+                echo '<img src="';
+                echo $file;
+                echo '">';
+            }
             
-            ?>
-        </p>
+            if ($mediaType == "video") {
+                echo '<video src="';
+                echo $file;
+                echo '" controls/>';
+            }
         
-        <p>
-            <strong>Date</strong> <br />
-            <?php echo $date; ?></p>
-        <p>
-            <strong>Description</strong> <br />
-            <?php echo $description; ?>
-        </p>
-        <div id="links">
-            <strong>Links</strong><br />
-            <ul>
-                <li><a href="<?php echo $pageURL; ?>">Web Page</a></li>
-                <li><a href="<?php echo $directURL; ?>">Direct Link</a></li>
-                
-                <?php 
-                    $tweet = "$title via @chrishannah";
-                ?>
-                    
-                <li><a href="https://twitter.com/intent/tweet" class="twitter-mention-button" data-size="large" data-text="<?php echo $tweet; ?>" data-related="chrishannah" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
-            </ul>
-        </div>
-    </div>
-    <div id="footer">
-        <a href="http://www.twitter.com/chrishannah">Chris Hannah</a> &copy; 2016
-    </div>
-</body>
+        ?>
+    </p>
     
-</html>
+    <p>
+        <strong>Date</strong> <br />
+        <?php echo $date; ?></p>
+    <p>
+        <strong>Description</strong> <br />
+        <?php echo $description; ?>
+    </p>
+    <div id="links">
+        <strong>Links</strong><br />
+        <ul>
+            <li><a href="<?php echo $pageURL; ?>">Web Page</a></li>
+            <li><a href="<?php echo $directURL; ?>">Direct Link</a></li>
+            
+            <?php 
+                $tweet = "$title via @chrishannah";
+            ?>
+                
+            <li><a href="https://twitter.com/intent/tweet" class="twitter-mention-button" data-size="large" data-text="<?php echo $tweet; ?>" data-related="chrishannah" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+        </ul>
+    </div>
+</div>
+
+<?php include 'footer.php'; ?>
