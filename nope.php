@@ -1,4 +1,7 @@
-<?php include 'header.php'; ?>
+<?php 
+    $pagetitle = "Nope!";
+    include 'header.php'; 
+?>
 
 <div id="content">
     <h1>Nothing to be found here!</h1>

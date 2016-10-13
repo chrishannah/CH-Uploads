@@ -18,6 +18,7 @@
     
     
     $title = $upload['title'];
+    $pagetitle = $title;
     $description =  $upload['description'];
     $date =  $upload['date'];
     $file =  $upload['file'];

@@ -4,6 +4,7 @@
     
     $sql = "SELECT `id`, `title` FROM uploads";
     $result = $connection->query($sql);
+    $pagetitle = "All Uploads";
 ?>
 
 <?php include 'header.php'; ?>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Chris Hannah | Nope!</title>
+    <title>Chris Hannah | <?php echo $pagetitle; ?></title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
     
