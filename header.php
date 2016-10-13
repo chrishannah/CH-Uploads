@@ -8,5 +8,5 @@
     
 <body>
     <div id="header">
-        <strong>Chris Hannah</strong> Uploads
+        <a href="index.php"><strong>Chris Hannah</strong> Uploads</a>
     </div>

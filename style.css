@@ -16,7 +16,7 @@ h1 {
     font-weight: 400;
     color: #E80000;
     margin: 0;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom: 14px;
 }
 
@@ -97,4 +97,62 @@ ul li a:hover {
     background-color: #E80000;
     color: white;
     padding: 6px;
+}
+
+table {
+    max-width: 100%;
+    border-spacing: 0;
+    border-radius: 4px;
+}
+
+tr {
+    max-width: 100%;
+    min-width: 50%;
+    border: 0;
+    
+}
+
+tr:hover {
+    background-color: #eee;
+}
+
+thead {
+    background-color: #eee;
+}
+
+td, th {
+    height: 30px;
+    min-width: 200px;
+    border-bottom: 1px solid #E80000;
+    text-align: left;
+    padding: 4px;
+}
+
+th {
+    border-width: 2px;
+}
+
+#fileupload {
+    width: 100%;
+    height: 30px;
+}
+
+#title {
+    padding: 0px;
+    border: 0;
+    margin-top: 10px;
+    font-size: 16px;
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #E80000;
+}
+
+#description {
+    padding: 0px;
+    border: 0;
+    margin-top: 10px;
+    font-size: 16px;
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid #E80000;
 }

@@ -25,8 +25,8 @@
     $views =  $upload['views'];
     $type =  $upload['type'];
     
-    $pageURL = "http://www.chrishannah.me/uploads/file.php?id=$id";
-    $directURL = "http://www.chrishannah.me/uploads/$file";
+    $pageURL = "http://chrishannah.me/uploads/file.php?id=$id";
+    $directURL = "http://chrishannah.me/uploads/$file";
     
     $views++;
     $sql = "UPDATE `uploads` SET `views` = $views WHERE `id` = $id";
