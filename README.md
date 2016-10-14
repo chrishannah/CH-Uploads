@@ -7,6 +7,7 @@ A small project in PHP/MySQL to manage/store my images and videos that I share. 
 - PHP
 - MySQL
 - fileUploads must be turned on in php.ini
+- You should probably secure the dashboard.php file, otherwise anyone can upload stuff!
 
 Copy the files to your server.
 
