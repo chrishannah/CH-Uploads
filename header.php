@@ -1,8 +1,10 @@
+<? include'customisation.php'; ?>
+
 <!doctype html>
 <html>
 
 <head>
-    <title>Chris Hannah | <?php echo $pagetitle; ?></title>
+    <title><?php echo $site_name; ?> | <?php echo $pagetitle; ?></title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
     

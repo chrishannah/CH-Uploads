@@ -82,10 +82,10 @@
             <li><a href="<?php echo $directURL; ?>">Direct Link</a></li>
             
             <?php 
-                $tweet = "$title via @chrishannah";
+                $tweet = "$title via $site_twitter";
             ?>
                 
-            <li><a href="https://twitter.com/intent/tweet" class="twitter-mention-button" data-size="large" data-text="<?php echo $tweet; ?>" data-related="chrishannah" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+            <li><a href="https://twitter.com/intent/tweet" class="twitter-mention-button" data-size="large" data-text="<?php echo $tweet; ?>" data-related="<?php echo $site_twitter; ?>" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
         </ul>
     </div>
 </div>
