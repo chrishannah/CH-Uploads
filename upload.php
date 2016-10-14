@@ -18,7 +18,27 @@
          $file_name = mysqli_real_escape_string($connection, $file_name);
          $type =  pathinfo($file_name, PATHINFO_EXTENSION);
          
-         $sql = "INSERT INTO uploads (title, description, date, file, views, type) VALUES ('$title', '$description', NOW(), '$file_name', '0', '$type')";
+         $mediaType = "something";
+    
+         switch ($type) {
+             case "mp4":
+             case "mkv":
+             case "mov":
+             case "ogg":
+             case "webm":
+                 $mediaType = "video";
+                 break;
+             case "jpg":
+             case "jpeg":
+             case "gif":
+             case "png":
+                
+             default: 
+                 $mediaType = "image";
+                 break;
+         }
+         
+         $sql = "INSERT INTO uploads (title, description, date, file, views, type) VALUES ('$title', '$description', NOW(), '$file_name', '0', '$mediaType')";
          
          $result = $connection->query($sql);
          

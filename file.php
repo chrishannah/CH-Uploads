@@ -32,26 +32,6 @@
     $sql = "UPDATE `uploads` SET `views` = $views WHERE `id` = $id";
     $result = $connection->query($sql);
     
-    $mediaType = "something";
-    
-    switch ($type) {
-        case "mp4":
-        case "mkv":
-        case "mov":
-        case "ogg":
-        case "webm":
-            $mediaType = "video";
-            break;
-        case "jpg":
-        case "jpeg":
-        case "gif":
-        case "png":
-            
-        default: 
-            $mediaType = "image";
-            break;
-    }
-    
 ?>
 
 <?php include 'header.php'; ?>
@@ -64,13 +44,13 @@
     
     <p>
         <?php
-            if ($mediaType == "image") {
+            if ($type == "image") {
                 echo '<img src="';
                 echo $file;
                 echo '">';
             }
             
-            if ($mediaType == "video") {
+            if ($type == "video") {
                 echo '<video src="';
                 echo $file;
                 echo '" controls/>';

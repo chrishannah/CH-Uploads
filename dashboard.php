@@ -1,7 +1,7 @@
 <?php
     include 'connection.php';
     
-    $sql = "SELECT `id`, `title`, `views` FROM uploads";
+    $sql = "SELECT `id`, `title`, `views`, `type` FROM uploads";
     $result = $connection->query($sql);
     $pagetitle = "All Uploads";
     
@@ -24,7 +24,7 @@
     
     <h1>Analytics</h1>
     <table id="analytics">
-        <thead><th>Title</th><th>Views</th></thead>
+        <thead><th>Title</th><th>Views</th><th>Type</th></thead>
         <?php
             while($row = $result->fetch_assoc()) {
                 echo '<tr><td><a href="file.php?id=';
@@ -33,6 +33,8 @@
                 echo $row['title'];
                 echo '</a></td><td>';
                 echo $row['views'];
+                echo '</td><td>';
+                echo ucwords($row['type']);
                 echo '</td></tr>';
             }
         ?>
