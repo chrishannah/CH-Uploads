@@ -78,7 +78,9 @@
     
     <p>
         <strong>Date</strong> <br />
-        <?php echo $date; ?></p>
+        <?php 
+            echo date("d-m-Y", strtotime($date));
+        ?>
     <p>
         <strong>Description</strong> <br />
         <?php echo $description; ?>
