@@ -18,8 +18,15 @@
     
     
     $title = $upload['title'];
+    if ($title == "") {
+        $mediaType = ucwords($upload['type']);
+        $title = "Unnamed $mediaType";
+    }
     $pagetitle = $title;
     $description =  $upload['description'];
+    if ($description == "") {
+        $description = "There's no description for this, clearly it wasn't worth one.";
+    }
     $date =  $upload['date'];
     $file =  $upload['file'];
     $views =  $upload['views'];
