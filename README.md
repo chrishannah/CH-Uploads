@@ -24,4 +24,5 @@ Here's what it currently looks like when viewing an upload:
 
 ## Support
 If you like the project, and want to support me, then you can Flattr it!
+
 <a href="https://flattr.com/submit/auto?fid=9znnl0&url=https%3A%2F%2Fgithub.com%2Fchrishannah%2FCH-Uploads" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
