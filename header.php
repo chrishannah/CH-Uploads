@@ -1,4 +1,4 @@
-<? include'customisation.php'; ?>
+<?php include'customisation.php'; ?>
 
 <!doctype html>
 <html>
