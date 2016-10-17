@@ -21,7 +21,7 @@
 
     <h1>Analytics</h1>
 
-    <?php include(uploads-table.php); ?>
+    <?php include('uploads-table.php'); ?>
 
 </div>
 
