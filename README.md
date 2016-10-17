@@ -18,11 +18,9 @@ Change login details in the connection.php file.
 Change Site name and Twitter username in customisation.php file.
 
 ## Preview
-Here's what it currently looks like when viewing an upload:
-
-![CH Uploads Preview](http://chrishannah.me/uploads/CHUploads_Preview.png)
+![GIF](http://chrishannah.me/uploads/fMQdaYrq8k.gif)
 
 ## Support
 If you like the project, and want to support me, then you can Flattr it!
 
-<a href="https://flattr.com/submit/auto?fid=9znnl0&url=https%3A%2F%2Fgithub.com%2Fchrishannah%2FCH-Uploads" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
+<script id='fb3mnno'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//button.flattr.com/view/?fid=9znnl0&url=https%3A%2F%2Fgithub.com%2Fchrishannah%2FCH-Uploads';f.title='Flattr';f.height=62;f.width=55;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fb3mnno');</script>
