@@ -1,4 +1,9 @@
 <?php
+
+   function generateRandomString($length = 10) {
+     return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
+   }
+
    if(isset($_FILES['uploadFile'])){
       $errors= array();
       $file_name = $_FILES['uploadFile']['name'];
@@ -10,12 +15,23 @@
       if(empty($errors)==true) {
          include'customisation.php';
          include 'connection.php';
-         move_uploaded_file($file_tmp,$uploadDirectory.$file_name);
 
          $title = mysqli_real_escape_string($connection, $_POST["title"]);
          $description = mysqli_real_escape_string($connection, $_POST["description"]);
          $file_name = mysqli_real_escape_string($connection, $file_name);
          $type =  pathinfo($file_name, PATHINFO_EXTENSION);
+
+         $fileExists = true;
+
+         while ($fileExists) {
+           $randString = generateRandomString();
+           $randFileName = $randString.'.'.$type;
+           if (!file_exists($uploadDirectory.$randFileName)) {
+             $fileExists = false;
+           }
+         }
+
+         move_uploaded_file($file_tmp,$uploadDirectory.$randFileName);
 
          $mediaType = "something";
 
@@ -37,7 +53,7 @@
                  break;
          }
 
-         $sql = "INSERT INTO uploads (title, description, date, file, views, type) VALUES ('$title', '$description', NOW(), '$file_name', '0', '$mediaType')";
+         $sql = "INSERT INTO uploads (title, description, date, file, views, type) VALUES ('$title', '$description', NOW(), '$randFileName', '0', '$mediaType')";
 
 
         // SQL Debugging

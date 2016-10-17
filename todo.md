@@ -1,3 +1,3 @@
 # Todo
 
-- [ ] Check if file exists
+- [ ] Video support
