@@ -20,18 +20,8 @@
     </form>
 
     <h1>Analytics</h1>
-    
-    <table id="analytics">
-        <thead><th>Title</th><th>Views</th><th>Type</th></thead>
-        <?php
-            while($row = $result->fetch_assoc()) {
-                echo '<tr><td>';
-                echo '<a href="file.php?id='.$row['id'].'">'.$row['title'].'</a></td>';
-                echo '<td>'.$row['views'].'</td>';
-                echo '<td>'.ucwords($row['type']).'</td></tr>';
-            }
-        ?>
-    </table>
+
+    <?php include(uploads-table.php); ?>
 
 </div>
 
