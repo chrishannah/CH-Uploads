@@ -10,5 +10,5 @@
     
 <body>
     <div id="header">
-        <a href="index.php"><strong><?php echo $site_name; ?>/strong> Uploads</a>
+        <a href="index.php"><strong><?php echo $site_name; ?></strong> Uploads</a>
     </div>

@@ -1,4 +1,6 @@
 <?php
+    
+
    if(isset($_FILES['uploadFile'])){
       $errors= array();
       $file_name = $_FILES['uploadFile']['name'];
@@ -8,10 +10,11 @@
       $file_ext=strtolower(end(explode('.',$_FILES['uploadFile']['name'])));
       
       if(empty($errors)==true) {
-         move_uploaded_file($file_tmp,"/var/www/html/uploads/".$file_name);
+         include'customisation.php';
+         include 'connection.php';
+         move_uploaded_file($file_tmp,$uploadDirectory.$file_name);
          echo "Success";
          
-         include 'connection.php';
          
          $title = mysqli_real_escape_string($connection, $_POST["title"]);
          $description = mysqli_real_escape_string($connection, $_POST["description"]);
@@ -39,6 +42,11 @@
          }
          
          $sql = "INSERT INTO uploads (title, description, date, file, views, type) VALUES ('$title', '$description', NOW(), '$file_name', '0', '$mediaType')";
+         
+         
+        // SQL Debugging
+        // echo '<p><strong>SQL Query</strong><br />'.$sql.'</p>';
+        
          
          $result = $connection->query($sql);
          

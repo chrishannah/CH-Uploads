@@ -5,5 +5,5 @@ CREATE TABLE `uploads` (
   `date` datetime,
   `file` varchar(100),
   `views` int(11),
-  `type` varchar(4)
+  `type` varchar(5)
   );
