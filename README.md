@@ -1,3 +1,5 @@
+**Support Me** - If you like what I'm doing, then help a student continue by donating a coffee! [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/ChrisHannah/5)
+
 # CH-Uploads
 A small project in PHP/MySQL to manage/store my images and videos that I share. This way I don't need third-party services, or have to put up with compression.
 
