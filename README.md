@@ -1,4 +1,4 @@
-**Support Me** - If you like what I'm doing, then help a student continue by donating a coffee! [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/ChrisHannah/5)
+**Support Me** - If you like what I'm doing, then help a student continue by donating a coffee! <a href="https://www.patreon.com/bePatron?u=5214284" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://cdn6.patreon.com/becomePatronButton.bundle.js"></script>
 
 # CH-Uploads
 A small project in PHP/MySQL to manage/store my images and videos that I share. This way I don't need third-party services, or have to put up with compression.
